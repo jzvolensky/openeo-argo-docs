@@ -1,0 +1,31 @@
+{
+  "process_graph": {
+    "save2": {
+      "process_id": "save_result",
+      "arguments": {
+        "data": {
+          "from_node": "load3"
+        },
+        "format": "GTIFF"
+      },
+      "result": true
+    },
+    "load3": {
+      "process_id": "load_stac",
+      "arguments": {
+        "url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a",
+        "spatial_extent": {
+          "west": 16.24627712332192,
+          "east": 16.36465127282477,
+          "south": 48.05723397255838,
+          "north": 48.128980516672385
+        },
+        "temporal_extent": [
+          "2025-09-01T00:00:00Z",
+          "2025-09-03T00:00:00Z"
+        ]
+      }
+    }
+  },
+  "parameters": []
+}
